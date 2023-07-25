@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #board{
+            width: 320px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #board div div{
+            border: 1px solid black;
+            height: 60px;
+            width: 60px;
+            font-size: 20px;
+            line-height: 3;
+            text-align: center;
+
+        }
+    </style>
+    <title>othello4</title>
+</head>
+<body>
+    <div id="board">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+    </div>
+    <script>
+        const board = document.querySelector('#board');
+        const rowA = document.querySelector('.row:nth-child(1)')
+        for(let i = 0; i < 5; i++){
+            const item = document.createElement('div');
+            item.addEventListener('click',()=>{
+                item.textContent = "〇"
+            })
+            rowA.appendChild(item)
+
+        }
+        const rowB = document.querySelector('.row:nth-child(2)')
+        for(let i = 0; i<5; i++){
+            const item = document.createElement('div');
+            item.textContent = Math.floor(Math.random()*15+16);
+            item.addEventListener('click',()=>{
+                item.textContent = "〇"
+            })
+            rowB.appendChild(item)
+        }
+        const rowC = document.querySelector('.row:nth-child(2)')
+        for(let i = 0; i<5; i++){
+            const item = document.createElement('div');
+            item.textContent = Math.floor(Math.random()*15+16);
+            item.addEventListener('click',()=>{
+                item.textContent = "〇"
+            })
+            rowC.appendChild(item)
+        }
+        const rowD = document.querySelector('.row:nth-child(2)')
+        for(let i = 0; i<5; i++){
+            const item = document.createElement('div');
+            item.textContent = Math.floor(Math.random()*15+16);
+            item.addEventListener('click',()=>{
+                item.textContent = "〇"
+            })
+            rowD.appendChild(item)
+        }
+        const rowE = document.querySelector('.row:nth-child(2)')
+        for(let i = 0; i<5; i++){
+            const item = document.createElement('div');
+            item.textContent = Math.floor(Math.random()*15+16);
+            item.addEventListener('click',()=>{
+                item.textContent = "〇"
+            })
+            rowE.appendChild(item)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+<style>
+    #board{
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        width: 800px;
+    }
+    #board div{
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        background-color: green;
+    }
+</style>
+<title>オセロ</title>
+</head>
+<body>
+    <div id="board"></div>
+    <script src="othello.js">
+    const board = document.getElementById('board')
+
+    for (let i = 0; i < 64; i++){
+        const masu = document.creatElement('div');
+
+        board.append(masu);
+    }
+    const bord = Document.getElementById('board')
+
+    let count = 0
+    const game = []
+    function makeBlack(masu){
+        masu.textContent = '●'
+        masu.classList.add('black')
+        
+    }
+    function makewhite(masu){
+        masu.textContent = '○'
+        masu.classList.add('white')
+    }
+
+    for (let i = 0; i<64 i++){
+        
+    }
+</script>
+</body>
+</html>

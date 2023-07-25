@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #board{
+            width: 320px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #board div{
+            border: 1px solid black;
+            height: 60px;
+            font-size: 30px;
+            line-height: 2;
+            text-align: center;
+        }
+    </style>
+    <title>othello3</title>
+</head>
+
+<body>
+    <div id="board"></div>
+    <script>const board = document.querySelector('board'); for (let i = 0; i < 25; i++){
+    const item = document.createElement('div')
+    item.textcontent = Math.floor (Math.random()*75+1)
+    board.appendChild(item) } </script>
+</body>
+
+</html>
