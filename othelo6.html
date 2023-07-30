@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #board {
+            width: 320px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #board div{
+            border: 1px solid black;
+            height: 60px;
+            width: 60px;
+            font-size: 20px;
+            line-height: 3;
+            text-align: center;
+        }
+    </style>
+    <title>othello6</title>
+
+</head>
+<body>
+    <div id="board">
+
+    </div>
+    <script>
+        const board = document.querySelector('#board');
+
+        for (i = 0; i < 25; i++) {
+            const item = document.createElement('div');
+
+            if(i%5===0){
+                item.textContent = Math.floor(Math.random()*15+1);
+            } else if(i%5===1){
+                item.textContent = Math.floor(Math.random()*15+16);
+            }
+            else if(i%5===2){
+                item.textContent = Math.floor(Math.random()*15+31);
+            }
+            else if(i%5===3){
+                item.textContent = Math.floor(Math.random()*15+46);
+            }
+            else if(i%5===4){
+                item.textContent = Math.floor(Math.random()*15+61);
+            }
+
+            if(i === 12){
+                item.textContent = "FREE"
+            }
+            item.addEventListener('click',()=>{
+                item.textContent = "◯"
+            })
+        }
+    </script>
+</body>
+</html>
